@@ -1,0 +1,9 @@
+.cart-body h4{
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.cart-body{
+    position: sticky;
+    top: 0;
+}

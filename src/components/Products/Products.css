@@ -1,5 +1,6 @@
 .products-container {
   display: flex;
+  margin-top: 20px;
 }
 .products {
   margin: 0 5%;

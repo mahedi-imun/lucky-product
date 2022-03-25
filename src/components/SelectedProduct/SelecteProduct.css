@@ -1,0 +1,13 @@
+.selected-product-info{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(253, 239, 220);
+    border-radius: 10px;
+    justify-content: space-around;
+}
+.selected-product-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

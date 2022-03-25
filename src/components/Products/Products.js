@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import BodySpray from '../Body-spray/BodySpray';
+import Cart from '../Cart/Cart';
 import './Products.css'
 const Products = () => {
+    const [product, setProduct] = useState([])
+    const cartHandler = (bodySpray) => {
+        console.log(bodySpray.id);
+        if (product.length < 4) {
+            const newProduct = [...product, bodySpray]
+            setProduct(newProduct)
+        }
+        else {
+            alert('Only Four product to add')
+        }
+    }
     const [products, setProducts] = useState([])
     useEffect(() => {
         fetch('products.json')
@@ -14,17 +26,15 @@ const Products = () => {
                 {
                     products.map(product => <BodySpray
                         key={product.id}
-                        BodySpray={product}
+                        bodySpray={product}
+                        cartHandler={cartHandler}
                     ></BodySpray>)
 
                 }
             </div>
             <div className='cart-container'>
-                <h1>cart</h1>
+                <Cart product={product}></Cart>
             </div>
-
-
-
         </div>
     );
 };
