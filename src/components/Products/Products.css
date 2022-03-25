@@ -1,0 +1,17 @@
+.products-container {
+  display: flex;
+}
+.products {
+  margin: 0 5%;
+  flex: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cart-container{
+  flex: 30%;
+  background-color: #dfe6e9;
+  position:sticky;
+  top: 0;
+
+}
