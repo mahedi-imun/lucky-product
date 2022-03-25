@@ -1,0 +1,23 @@
+.nav-container{
+    background-color: rgb(19, 29, 61);
+    height: 80px;
+}
+.nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h2{
+    color: #ffff;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+}
+.nav-items a{
+    text-decoration: none; 
+    color: #ffff;
+    font-size: 1.2rem;
+    padding: 20px;
+}

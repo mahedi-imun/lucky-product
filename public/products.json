@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "balance": 99,
+      "picture": "https://www.freepik.com/free-psd/4-oz-spray-bottle-mockup-front-\t\tview_18454768.htm#query=body%20spray&position=20&from_view=search",
+      "name": "blue man body spray",
+      "company": "mockup"
+    },
+    {
+      "id": 2,
+      "balance": 555,
+      "picture": "https://www.freepik.com/free-psd/amber-glass-cosmetic-bottle-\t\tmockup_17488957.htm#query=body%20spray&position=49&from_view=search",
+      "name": "gold man body spray",
+      "company": "mockup"
+    },
+    {
+      "id": 3,
+      "balance": 483,
+      "picture": "https://www.shopz.com.bd/wp-content/uploads/2020/11/FOGG-Black-\tMen-Body-Spray-Aromatic-120ml.jpeg",
+      "name": "fogg body spray",
+      "company": "vini cosmetics"
+    },
+    {
+      "id": 4,
+      "balance": 277,
+      "picture": "https://m.media-amazon.com/images/I/51JBj+GaOfL._SL1000_.jpg",
+      "name": "shot body spray",
+      "company": "global cosmetics"
+    },
+    {
+      "id": 5,
+      "balance": 547,
+      "picture": "https://382815-1202109-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/04/axe-body-spray.jpg",
+      "name": "axe body spray",
+      "company": "axe cosmetics"
+    },
+    {
+      "id": 6,
+      "balance": 997,
+      "picture": "https://m.media-amazon.com/images/I/71nwQURh6ZL._SL1500_.jpg",
+      "name": "adidas body spray",
+      "company": "addidas cosmetics"
+    },
+    {
+      "id": 7,
+      "balance": 497,
+      "picture": "https://m.media-amazon.com/images/I/41LhTwHvEvL._SL1000_.jpg",
+      "name": "nivea men",
+      "company": "nivea cosmetics"
+    },
+    {
+      "id": 8,
+      "balance": 400,
+      "picture": "https://m.media-amazon.com/images/I/51xiYqQmDIL._SL1000_.jpg",
+      "name": "royal men spray",
+      "company": "royal cosmetics"
+    },
+    {
+      "id": 9,
+      "balance": 800,
+      "picture": "https://m.media-amazon.com/images/I/41OsFqJyGdL._SL1500_.jpg",
+      "name": "He respec spray",
+      "company": "He cosmetics"
+    }
+  ]
