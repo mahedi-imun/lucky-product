@@ -15,15 +15,24 @@
 .card-info{
     padding: 0 20px;
 }
-.cart-btn{
+.add-cart-btn{
     border: none;
     padding: 10px 20px;
     background-color: rgb(146, 53, 233);
     border-radius: 25px;
     color:#fff;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.cart-btn:hover{
+.add-cart-btn:hover{
     background-color: rgb(230, 183, 97);
 
+}
+ .btn-icon{
+    color: #FFFF;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    
 }

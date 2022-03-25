@@ -5,7 +5,6 @@ import './Products.css'
 const Products = () => {
     const [product, setProduct] = useState([])
     const cartHandler = (bodySpray) => {
-        console.log(bodySpray.id);
         if (product.length < 4) {
             const newProduct = [...product, bodySpray]
             setProduct(newProduct)
