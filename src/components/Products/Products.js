@@ -1,33 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import BodySpray from '../Body-spray/BodySpray';
+import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import './Products.css'
 const Products = () => {
-    const [product, setProduct] = useState([])
-    const cartHandler = (bodySpray) => {
-        if (product.length < 4) {
-            const newProduct = [...product, bodySpray];
-            setProduct(newProduct)
+    const [products, setProducts] = useState([])
+    const [cart, setCart] = useState([])
+    const cartHandler = (products) => {
+        if (cart.length < 4) {
+            const newProduct = [...cart, products];
+            setCart(newProduct)
         }
         else {
             alert('Only Four product to add')
         }
     }
-    const handleRandomProduct = (products) => {
-        const getRandomProduct = []
-        let randomNum = Math.random() * 9
-        let roundRandom = Math.round(randomNum)
-        for (let newRandomProduct of products) {
-            if (roundRandom === newRandomProduct.id) {
-                getRandomProduct.push(newRandomProduct)
-                setProduct(getRandomProduct)
-            }
-        }
+    const handleRandomProduct = () => {
+        const newCart = cart;
+        const randomItem = newCart[Math.floor(Math.random() * newCart.length)];
+        const newRandomItems = [randomItem];
+        setCart(newRandomItems)
     };
-    const handleResetCart =()=>{
-        setProduct([])
+    const handleResetCart = () => {
+        setCart([])
     }
-    const [products, setProducts] = useState([])
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -42,15 +37,15 @@ const Products = () => {
             <div className='products-container'>
                 <div className='products'>
                     {
-                     products.map(product => <BodySpray
-                     key={product.id}
-                     bodySpray={product}
-                     cartHandler={cartHandler}
-                    ></BodySpray>)
+                        products.map(product => <Product
+                            key={product.id}
+                            bodySpray={product}
+                            cartHandler={cartHandler}
+                        ></Product>)
                     }
                 </div>
                 <div className='cart-container'>
-                    <Cart product={product}
+                    <Cart product={cart}
                         handleRandomProduct={handleRandomProduct}
                         handleResetCart={handleResetCart}
                     ></Cart>

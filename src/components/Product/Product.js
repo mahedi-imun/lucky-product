@@ -1,7 +1,7 @@
 import React from 'react';
-import './BodySpray.css'
+import './Product.css'
 import { FaCartPlus } from 'react-icons/fa';
-const BodySpray = ({ bodySpray, cartHandler }) => {
+const Product = ({ bodySpray, cartHandler }) => {
     const { name, picture, balance } = bodySpray;
     return (
         <div className='card'>
@@ -19,4 +19,4 @@ const BodySpray = ({ bodySpray, cartHandler }) => {
     );
 };
 
-export default BodySpray;
+export default Product;
