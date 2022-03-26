@@ -6,27 +6,27 @@ const Products = () => {
     const [product, setProduct] = useState([])
     const cartHandler = (bodySpray) => {
         if (product.length < 4) {
-            const newProduct = [...product, bodySpray]
+            const newProduct = [...product, bodySpray];
             setProduct(newProduct)
         }
         else {
             alert('Only Four product to add')
         }
     }
-    const handleRandomProduct =(products)=>{
+    const handleRandomProduct = (products) => {
         const getRandomProduct = []
-        let randomNum = Math.random()*9
+        let randomNum = Math.random() * 9
         let roundRandom = Math.round(randomNum)
         console.log(roundRandom);
-        for(let newRandomProduct of products){
-            if(roundRandom === newRandomProduct.id){
+        for (let newRandomProduct of products) {
+            if (roundRandom === newRandomProduct.id) {
                 getRandomProduct.push(newRandomProduct)
                 setProduct(getRandomProduct)
             }
-            
         }
-        
-    
+    };
+    const handleResetCart =()=>{
+        setProduct([])
     }
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -35,21 +35,29 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-        <div className='products-container'>
-            <div className='products'>
-                {
-                    products.map(product => <BodySpray
-                        key={product.id}
-                        bodySpray={product}
-                        cartHandler={cartHandler}
+        <div>
+            <div className='product-header'>
+                <h2> Save and Safe Body spray shop</h2>
+                <h3> maximum choose four body spray</h3>
+            </div>
+            <div className='products-container'>
+                <div className='products'>
+                    {
+                     products.map(product => <BodySpray
+                     key={product.id}
+                     bodySpray={product}
+                     cartHandler={cartHandler}
                     ></BodySpray>)
-                }
+                    }
+                </div>
+                <div className='cart-container'>
+                    <Cart product={product}
+                        handleRandomProduct={handleRandomProduct}
+                        handleResetCart={handleResetCart}
+                    ></Cart>
+                </div>
             </div>
-            <div className='cart-container'>
-                <Cart product={product}
-                handleRandomProduct={handleRandomProduct}
-                ></Cart>
-            </div>
+
         </div>
     );
 };

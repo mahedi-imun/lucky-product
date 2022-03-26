@@ -2,7 +2,7 @@
 import SelectedProduct from '../SelectedProduct/SelectedProduct';
 import './Cart.css'
 
-const Cart = ({ product,handleRandomProduct }) => {
+const Cart = ({ product,handleRandomProduct,handleResetCart }) => {
     return (
         <div className='cart-body'>
             <h4>Selected product</h4>
@@ -15,7 +15,7 @@ const Cart = ({ product,handleRandomProduct }) => {
             <div className='cart-btn-group'>
                 <button onClick={()=>handleRandomProduct(product)} className='cart-btn'>Chose one</button>
                 <br />
-                <button className='cart-btn'>Chose Agin</button>
+                <button onClick={()=>handleResetCart()} className='cart-btn'>Chose Agin</button>
             </div>
         </div>
     );
