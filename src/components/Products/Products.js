@@ -13,6 +13,21 @@ const Products = () => {
             alert('Only Four product to add')
         }
     }
+    const handleRandomProduct =(products)=>{
+        const getRandomProduct = []
+        let randomNum = Math.random()*9
+        let roundRandom = Math.round(randomNum)
+        console.log(roundRandom);
+        for(let newRandomProduct of products){
+            if(roundRandom === newRandomProduct.id){
+                getRandomProduct.push(newRandomProduct)
+                setProduct(getRandomProduct)
+            }
+            
+        }
+        
+    
+    }
     const [products, setProducts] = useState([])
     useEffect(() => {
         fetch('products.json')
@@ -28,11 +43,12 @@ const Products = () => {
                         bodySpray={product}
                         cartHandler={cartHandler}
                     ></BodySpray>)
-
                 }
             </div>
             <div className='cart-container'>
-                <Cart product={product}></Cart>
+                <Cart product={product}
+                handleRandomProduct={handleRandomProduct}
+                ></Cart>
             </div>
         </div>
     );
