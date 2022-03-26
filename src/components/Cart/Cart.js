@@ -1,7 +1,6 @@
 
 import SelectedProduct from '../SelectedProduct/SelectedProduct';
 import './Cart.css'
-
 const Cart = ({ product,handleRandomProduct,handleResetCart }) => {
     return (
         <div className='cart-body'>
@@ -13,9 +12,9 @@ const Cart = ({ product,handleRandomProduct,handleResetCart }) => {
                 ></SelectedProduct>)
             }
             <div className='cart-btn-group'>
-                <button onClick={()=>handleRandomProduct(product)} className='cart-btn'>Chose one</button>
+                <button onClick={()=>handleRandomProduct(product)} className='cart-btn'>Choose one</button>
                 <br />
-                <button onClick={()=>handleResetCart()} className='cart-btn'>Chose Agin</button>
+                <button onClick={()=>handleResetCart()} className='cart-btn'>Choose Agin</button>         
             </div>
         </div>
     );

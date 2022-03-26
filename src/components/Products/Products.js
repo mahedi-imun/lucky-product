@@ -17,7 +17,6 @@ const Products = () => {
         const getRandomProduct = []
         let randomNum = Math.random() * 9
         let roundRandom = Math.round(randomNum)
-        console.log(roundRandom);
         for (let newRandomProduct of products) {
             if (roundRandom === newRandomProduct.id) {
                 getRandomProduct.push(newRandomProduct)
