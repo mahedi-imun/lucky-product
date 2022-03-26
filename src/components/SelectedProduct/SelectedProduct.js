@@ -1,5 +1,5 @@
 import React from 'react';
-import './SelecteProduct.css'
+import './SelectedProduct.css'
 const SelectedProduct = ({ bodySpray }) => {
     const { name, picture } = bodySpray;
     return (

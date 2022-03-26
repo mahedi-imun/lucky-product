@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import swal from 'sweetalert';
 import Cart from '../Cart/Cart';
 import './Products.css'
 const Products = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
-    const cartHandler = (products) => {
+    const cartHandler = (selectProducts) => {
         if (cart.length < 4) {
-            const newProduct = [...cart, products];
+            const newProduct = [...cart, selectProducts];
             setCart(newProduct)
         }
         else {
-            alert('Only Four product to add')
+            swal("Only choose Four product ");
         }
     }
     const handleRandomProduct = () => {
@@ -51,7 +52,6 @@ const Products = () => {
                     ></Cart>
                 </div>
             </div>
-
         </div>
     );
 };
